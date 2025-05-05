@@ -5,3 +5,6 @@ tldextract==3.4.4
 aiohttp==3.8.5
 colorama==0.4.6
 urllib3==2.0.4
+beautifulsoup4==4.12.2
+requests==2.30.0
+tldextract==3.4.4

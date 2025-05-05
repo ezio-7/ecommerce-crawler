@@ -1,7 +1,0 @@
-2025-05-05 10:15:05,569 [INFO] Using settings: OUTPUT_DIR=output
-2025-05-05 10:15:05,569 [INFO] Starting crawl process for 4 domains...
-2025-05-05 10:15:05,570 [INFO] Starting crawler for domain: virgio.com
-2025-05-05 10:15:08,238 [INFO] Starting crawler for domain: tatacliq.com
-2025-05-05 10:15:10,215 [INFO] Starting crawler for domain: nykaafashion.com
-2025-05-05 10:15:12,305 [INFO] Starting crawler for domain: westside.com
-2025-05-05 10:15:14,381 [INFO] Crawl process complete!

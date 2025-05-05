@@ -5,15 +5,7 @@
   },
   "tatacliq.com": {
     "start_urls": ["https://www.tatacliq.com/"],
-    "product_patterns": [
-      "/p-",
-      "/c-",
-      "product-details",
-      "/products/",
-      "/product/",
-      "/w-",
-      "/u-"
-    ]
+    "product_patterns": ["/p-", "/c-", "product-details", "/products/"]
   },
   "nykaafashion.com": {
     "start_urls": ["https://nykaafashion.com/"],
