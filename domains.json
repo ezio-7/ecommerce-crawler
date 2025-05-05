@@ -1,0 +1,27 @@
+{
+    "virgio.com": {
+      "start_urls": ["https://www.virgio.com/"],
+      "product_patterns": [
+        "/collections/.*?/products/",
+        "/products/"
+      ]
+    },
+    "tatacliq.com": {
+      "start_urls": ["https://www.tatacliq.com/"],
+      "product_patterns": [
+        "/p-"
+      ]
+    },
+    "nykaafashion.com": {
+      "start_urls": ["https://nykaafashion.com/"],
+      "product_patterns": [
+        "/product/"
+      ]
+    },
+    "westside.com": {
+      "start_urls": ["https://www.westside.com/"],
+      "product_patterns": [
+        "/products/"
+      ]
+    }
+  }

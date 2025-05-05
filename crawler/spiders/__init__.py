@@ -1,0 +1,1 @@
+from crawler.spiders.ecommerce_spider import EcommerceSpider

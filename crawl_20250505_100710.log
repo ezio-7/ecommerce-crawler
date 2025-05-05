@@ -1,0 +1,108 @@
+2025-05-05 10:07:10,407 [INFO] Scrapy 2.8.0 started (bot: scrapybot)
+2025-05-05 10:07:10,444 [INFO] Versions: lxml 5.4.0.0, libxml2 2.11.9, cssselect 1.3.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.9.21 (main, Dec 11 2024, 16:35:24) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.3, Platform Windows-10-10.0.26100-SP0
+2025-05-05 10:07:10,446 [INFO] Starting crawler for domain: virgio.com
+2025-05-05 10:07:10,450 [INFO] Overridden settings:
+{}
+2025-05-05 10:07:10,456 [WARNING] C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\request.py:232: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2025-05-05 10:07:10,466 [DEBUG] Using reactor: twisted.internet.selectreactor.SelectReactor
+2025-05-05 10:07:10,499 [INFO] Telnet Password: 9d4211a10b444140
+2025-05-05 10:07:10,530 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:07:10,531 [INFO] Starting crawler for domain: tatacliq.com
+2025-05-05 10:07:10,533 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:07:10,538 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 121, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 133, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\crawl.py", line 146, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\__init__.py", line 53, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\spiders\ecommerce_spider.py", line 78, in __init__
+    self.max_products = self.settings.getint('MAX_PRODUCTS_PER_DOMAIN')
+AttributeError: 'EcommerceSpider' object has no attribute 'settings'
+2025-05-05 10:07:10,542 [INFO] Overridden settings:
+{}
+2025-05-05 10:07:10,544 [INFO] Telnet Password: 3aca8a3a4dfbe4db
+2025-05-05 10:07:10,546 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:07:10,547 [INFO] Starting crawler for domain: nykaafashion.com
+2025-05-05 10:07:10,551 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:07:10,553 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 121, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 133, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\crawl.py", line 146, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\__init__.py", line 53, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\spiders\ecommerce_spider.py", line 78, in __init__
+    self.max_products = self.settings.getint('MAX_PRODUCTS_PER_DOMAIN')
+AttributeError: 'EcommerceSpider' object has no attribute 'settings'
+2025-05-05 10:07:10,558 [INFO] Overridden settings:
+{}
+2025-05-05 10:07:10,560 [INFO] Telnet Password: f1365e623c429b4b
+2025-05-05 10:07:10,562 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:07:10,564 [INFO] Starting crawler for domain: westside.com
+2025-05-05 10:07:10,566 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:07:10,567 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 121, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 133, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\crawl.py", line 146, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\__init__.py", line 53, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\spiders\ecommerce_spider.py", line 78, in __init__
+    self.max_products = self.settings.getint('MAX_PRODUCTS_PER_DOMAIN')
+AttributeError: 'EcommerceSpider' object has no attribute 'settings'
+2025-05-05 10:07:10,572 [INFO] Overridden settings:
+{}
+2025-05-05 10:07:10,574 [INFO] Telnet Password: 46321994471f5ecc
+2025-05-05 10:07:10,575 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:07:10,576 [INFO] Starting crawl process for 4 domains...
+2025-05-05 10:07:10,577 [INFO] Crawl process complete!
+2025-05-05 10:07:10,596 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:07:10,597 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 121, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 133, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\crawl.py", line 146, in from_crawler
+    spider = super().from_crawler(crawler, *args, **kwargs)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\spiders\__init__.py", line 53, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\spiders\ecommerce_spider.py", line 78, in __init__
+    self.max_products = self.settings.getint('MAX_PRODUCTS_PER_DOMAIN')
+AttributeError: 'EcommerceSpider' object has no attribute 'settings'

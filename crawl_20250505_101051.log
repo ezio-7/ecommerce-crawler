@@ -1,0 +1,571 @@
+2025-05-05 10:10:51,615 [INFO] Starting crawl process for 4 domains...
+2025-05-05 10:10:51,620 [INFO] Scrapy 2.8.0 started (bot: scrapybot)
+2025-05-05 10:10:51,657 [INFO] Versions: lxml 5.4.0.0, libxml2 2.11.9, cssselect 1.3.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.9.21 (main, Dec 11 2024, 16:35:24) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.3, Platform Windows-10-10.0.26100-SP0
+2025-05-05 10:10:51,658 [INFO] Adding crawler for domain: virgio.com
+2025-05-05 10:10:51,661 [INFO] Overridden settings:
+{}
+2025-05-05 10:10:51,666 [WARNING] C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\request.py:232: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2025-05-05 10:10:51,672 [DEBUG] Using reactor: twisted.internet.selectreactor.SelectReactor
+2025-05-05 10:10:51,699 [INFO] Telnet Password: a8b3da8c17d006af
+2025-05-05 10:10:51,729 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:10:52,043 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-05-05 10:10:52,049 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-05 10:10:52,054 [INFO] Enabled item pipelines:
+['crawler.pipelines.DuplicatesPipeline', 'crawler.pipelines.OutputPipeline']
+2025-05-05 10:10:52,055 [INFO] Spider opened
+2025-05-05 10:10:52,234 [INFO] Closing spider (shutdown)
+2025-05-05 10:10:52,235 [ERROR] Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 60, in close_spider
+    combined_file = os.path.join(self.output_dir, f"all_domains_{timestamp}.json")
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\ntpath.py", line 78, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,239 [ERROR] Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x0000021E6C5B2100>>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\defer.py", line 312, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\extensions\corestats.py", line 30, in spider_closed
+    elapsed_time = finish_time - self.start_time
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
+2025-05-05 10:10:52,244 [INFO] Dumping Scrapy stats:
+{'log_count/DEBUG': 1,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 1}
+2025-05-05 10:10:52,245 [INFO] Spider closed (shutdown)
+2025-05-05 10:10:52,245 [INFO] Adding crawler for domain: tatacliq.com
+2025-05-05 10:10:52,248 [INFO] Overridden settings:
+{}
+2025-05-05 10:10:52,249 [INFO] Telnet Password: a6cc13426e8afe09
+2025-05-05 10:10:52,252 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:10:52,255 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-05-05 10:10:52,256 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-05 10:10:52,257 [INFO] Enabled item pipelines:
+['crawler.pipelines.DuplicatesPipeline', 'crawler.pipelines.OutputPipeline']
+2025-05-05 10:10:52,258 [INFO] Spider opened
+2025-05-05 10:10:52,259 [INFO] Closing spider (shutdown)
+2025-05-05 10:10:52,260 [ERROR] Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 60, in close_spider
+    combined_file = os.path.join(self.output_dir, f"all_domains_{timestamp}.json")
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\ntpath.py", line 78, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,262 [ERROR] Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x0000021E6C5C3EE0>>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\defer.py", line 312, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\extensions\corestats.py", line 30, in spider_closed
+    elapsed_time = finish_time - self.start_time
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
+2025-05-05 10:10:52,265 [INFO] Dumping Scrapy stats:
+{'log_count/ERROR': 2, 'log_count/INFO': 8}
+2025-05-05 10:10:52,265 [INFO] Spider closed (shutdown)
+2025-05-05 10:10:52,266 [INFO] Adding crawler for domain: nykaafashion.com
+2025-05-05 10:10:52,267 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:10:52,268 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,274 [INFO] Overridden settings:
+{}
+2025-05-05 10:10:52,275 [INFO] Telnet Password: e2ff9325aa2f8e0d
+2025-05-05 10:10:52,278 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:10:52,281 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-05-05 10:10:52,283 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-05 10:10:52,283 [INFO] Enabled item pipelines:
+['crawler.pipelines.DuplicatesPipeline', 'crawler.pipelines.OutputPipeline']
+2025-05-05 10:10:52,284 [INFO] Spider opened
+2025-05-05 10:10:52,285 [INFO] Closing spider (shutdown)
+2025-05-05 10:10:52,286 [ERROR] Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 60, in close_spider
+    combined_file = os.path.join(self.output_dir, f"all_domains_{timestamp}.json")
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\ntpath.py", line 78, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,288 [ERROR] Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x0000021E6C9F77C0>>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\defer.py", line 312, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\extensions\corestats.py", line 30, in spider_closed
+    elapsed_time = finish_time - self.start_time
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
+2025-05-05 10:10:52,291 [INFO] Dumping Scrapy stats:
+{'log_count/ERROR': 2, 'log_count/INFO': 8}
+2025-05-05 10:10:52,292 [INFO] Spider closed (shutdown)
+2025-05-05 10:10:52,292 [INFO] Adding crawler for domain: westside.com
+2025-05-05 10:10:52,293 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:10:52,295 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,300 [INFO] Overridden settings:
+{}
+2025-05-05 10:10:52,301 [INFO] Telnet Password: 08abaa57f46cea11
+2025-05-05 10:10:52,305 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2025-05-05 10:10:52,309 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-05-05 10:10:52,312 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-05-05 10:10:52,313 [INFO] Enabled item pipelines:
+['crawler.pipelines.DuplicatesPipeline', 'crawler.pipelines.OutputPipeline']
+2025-05-05 10:10:52,313 [INFO] Spider opened
+2025-05-05 10:10:52,314 [INFO] Closing spider (shutdown)
+2025-05-05 10:10:52,315 [ERROR] Scraper close failure
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 60, in close_spider
+    combined_file = os.path.join(self.output_dir, f"all_domains_{timestamp}.json")
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\ntpath.py", line 78, in join
+    path = os.fspath(path)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,318 [ERROR] Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x0000021E6CA159A0>>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\utils\defer.py", line 312, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\extensions\corestats.py", line 30, in spider_closed
+    elapsed_time = finish_time - self.start_time
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
+2025-05-05 10:10:52,323 [INFO] Dumping Scrapy stats:
+{'log_count/ERROR': 2, 'log_count/INFO': 8}
+2025-05-05 10:10:52,327 [INFO] Spider closed (shutdown)
+2025-05-05 10:10:52,329 [INFO] Crawl process complete!
+2025-05-05 10:10:52,376 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:10:52,378 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-05-05 10:10:52,381 [CRITICAL] Unhandled error in Deferred:
+2025-05-05 10:10:52,382 [CRITICAL] 
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\crawler.py", line 124, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\engine.py", line 367, in open_spider
+    yield self.scraper.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 2013, in _inlineCallbacks
+    result = context.run(
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\scrapy\core\scraper.py", line 111, in open_spider
+    yield self.itemproc.open_spider(spider)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\site-packages\twisted\internet\defer.py", line 1088, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "C:\Users\ASUS\Documents\VSCODE Dev\ecommerce-crawler\crawler\pipelines.py", line 35, in open_spider
+    Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 1082, in __new__
+    self = cls._from_parts(args, init=False)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 707, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\ASUS\anaconda3\envs\ecommerce-crawler\lib\pathlib.py", line 691, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
